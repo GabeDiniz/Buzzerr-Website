@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Buzzerr Login</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <body>
+            <div class="loginbox">
+                <img src="icons/pfpicon.jpeg" class="avatar">
+                <h1>Buzzerr Login</h1>
+                <div class="social">
+                    <a href="https://www.instagram.com/">
+                        <img src='icons/ig.jpg'>
+                    </a>
+                    <a href="https://twitter.com/">
+                        <img src='icons/tw.jpg'>
+                    </a>
+                </div>
+                
+                <form action="javascript:;" onsubmit="redir()" class="form">
+                    
+                    <p>Email</p>
+                    <h2>Please use @uwo.ca, @yorku.ca, or @utoronto.ca</h2>
+                    <input type="email" id="email" pattern=".+@uwo.ca|.+utoronto.ca|.+yorku.ca" name="email" placeholder="Enter Email" required>
+                    <p>Password</p>
+                    <input type="password" name="" placeholder="Enter Password" required>
+                    <button id="submit" type="submit" name="submit" value="Login">Login</button><br>
+                    <a href="create.html">Don't have an account?</a>
+
+                </form>
+                
+            </div>
+            
+        </body>
+        <script>
+
+            function redir() {
+                
+                var mail=document.getElementById('email').value;
+                var address=mail.split('@')[1];
+                console.log(address)
+                if (address == 'uwo.ca') {
+                    window.location.href = "https://www.uwo.ca/";
+                } else if (address == 'utoronto.ca') {
+                    window.location.href = "https://www.utoronto.ca/"
+                } else if (address == 'yorku.ca') {
+                    window.location.href = "https://www.yorku.ca/"
+                }
+            }
+            
+        </script>
+        
+    </head>
+</html>
